@@ -1,0 +1,302 @@
+:root{
+    --color_primario: #485936;
+    --color_secundario: #8ca47a;
+    --color_terciario: #cadbb7;
+    --color_cuarto: #fcfbfc;
+    --color_quinto: #9dcdbf;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("images/fondo.png");
+    background-repeat: repeat;
+    background-size: 100% auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ol, ul {
+    list-style: none;
+}
+.header {
+    height: 60px;
+    background-color: var(--color_cuarto);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 20px;
+}
+.menu_hamburguesa{
+    display: none;
+}
+.menu_hamburguesa:checked + .ul_links{
+    height: calc(100vh - 60px);
+}
+.logo {
+    color: var(--color_primario);
+}
+.label_hamburguesa {
+}
+.list_icon {
+    color: var(--color_primario);
+}
+.ul_links {
+    width: 60%;
+    background-color: var(--color_cuarto);
+    position: absolute;
+    top: 61px;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    right: 0;
+    transition: all .4s;
+}
+.li_links {
+    margin-top: 25px;
+}
+.link {
+    font-size: 1.3rem;
+    color: var(--color_primario);
+}
+.contenedor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.contenedor img {
+    width: 90%;      
+    height: auto;    
+    display: block; 
+}
+h2 {
+  font-family: 'Raleway', serif;
+  font-weight: 200; /* o 600 para más grosor */
+  font-size: clamp(0.4rem, 2.5vw, 3.5rem);
+  letter-spacing: 2px; /* opcional, separa un poco las letras */
+  width: 100%;
+}
+h3 {
+  font-family: 'Raleway', serif;
+  font-weight: 400; /* o 600 para más grosor */
+  font-size: clamp(0.4rem, 2vw, 3.5rem);
+  letter-spacing: 1px; /* opcional, separa un poco las letras */
+  width: 100%;
+  text-align: left;
+}
+.columnas-texto {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.columnas-texto p {
+    width: 50%;           /* cada columna ocupa el 50% */
+    text-align: justify;  /* opcional */
+}
+section {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+.contenedor2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top:10vw; 
+    background-image: url(images/verde.png); 
+    background-size: 100% auto; 
+    background-repeat: repeat;
+}
+
+/* Estilos para la sección principal */
+#programa {
+    background-color: white;
+    margin: 70px 0 70px;
+    padding: 0 8vw; /* Espaciado lateral para móviles */
+    text-align: center;
+    width: 100%;
+}
+
+/* Imagen principal adaptativa */
+.imagen-principal {
+    width: 100%;
+    padding: 60px 0;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Contenedor de imágenes secundarias */
+.columnas-texto2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8vw; /* Espacio entre imágenes */
+    margin-bottom: 60px;
+}
+
+/* Imágenes individuales */
+.columnas-texto2 img {
+    width: 25%; /* 5 en una fila aprox en escritorio */
+    max-height: 100px;
+    width: auto;
+}
+
+#tiempo h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: 'Raleway', serif;
+    font-weight: 400; /* o 600 para más grosor */
+    letter-spacing: 2px; /* opcional, separa un poco las letras */
+    width: 100%;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    flex-wrap: wrap;
+}
+
+.contador div {
+    background: #d6f8e4;
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 80px;
+}
+
+.contador span {
+    display: block;
+    font-size: 2rem;
+    color: #044f20;
+    font-weight: bold;
+}
+
+.contador p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+audio {
+  width: 300px;
+  border: 2px solid #0d4300;
+  border-radius: 10px;
+  background-color: #dfffeb;
+  padding: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #daffe3;
+    color: rgb(0, 43, 12);
+    padding: 12px 20px 12px 16px;
+    font-size: 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-flotante:hover {
+    background-color: #218838;
+    transform: scale(1.03);
+}
+
+/* Estilo para el icono dentro del botón */
+.icono-flotante {
+    width: 25px;
+    height: 25px;
+}
+
+
+.boton-flotante:hover {
+  background-color: #218838;
+}
+
+
+@media (min-width:768px){
+    .label_hamburguesa{
+        display: none;
+    }
+    .ul_links {
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 3rem;
+        padding: 0 25px;
+    }
+    .link{
+        font-size: 1.2rem;
+        transition: all .3s;
+    }
+    .li_links{
+        margin-top: 0;
+    }
+    .columnas-texto img {
+        width: 33%;
+    }
+    .boton-flotante {
+        bottom: 10px;
+        right: 10px;
+        font-size: 12px;
+        padding: 10px 16px 10px 12px;
+        border-radius: 25px;
+        gap: 8px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .icono-flotante {
+        width: 15px;
+        height: 15px;
+    }
+}
+/* Responsivo */
+@media (max-width: 600px) {
+    .contador {
+        gap: 15px;
+    }
+
+    .contador div {
+        padding: 15px;
+        min-width: 70px;
+    }
+
+    .contador span {
+        font-size: 1.5rem;
+    }
+}

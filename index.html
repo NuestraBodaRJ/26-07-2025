@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Nuestra Boda J&R</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo">R&J</h1>
+            <label class="label_hamburguesa" for="menu_hamburguesa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+            </label>
+            <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+            <ul class="ul_links">
+                <li class="li_links">
+                    <a href="#portada" class="link">Portada</a>
+                </li>
+                <li class="li_links">
+                    <a href="#fecha_y_hora" class="link">Fecha y Hora</a>
+                </li>
+                <li class="li_links">
+                    <a href="#ubicacion" class="link">Ubición</a>
+                </li>
+                <li class="li_links">
+                    <a href="#programa" class="link">Programa de la Boda</a>
+                </li>
+                <li class="li_links">
+                    <a href="#tiempo" class="link">Tiempo</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor">
+        <section id="portada" style="padding-top: 10vw;">
+            <img src="images/nombres.png" alt="">
+            <img src="images/celebrando.png" alt="" style="width: 70%;">
+            <audio controls autoplay loop style="margin-top: 5vw; width: 70%">
+                <source src="audio/pioners.mp3" type="audio/mpeg">
+            </audio>
+
+            <h2 style="padding: 6vw 0;">Con la bendición de Dios y de nuestros Padres</h2>
+            <div class="columnas-texto">
+                <h3>Mario Mamani Condori +<br>Virginia Luque Ah3aza</h3>
+                <h3>Ramiro Machaca Vargas +<br>Blanca Huanca Cori</h3>
+            </div>
+        </section>
+        <section id="fecha_y_hora" style="padding-top: 7vw;">
+            <img src="images/fecha.png" alt="">
+            <h2 style="padding-top: 7vw; font-weight: 400;">NUESTROS CONSEJEROS<br><br>Hugo Chino / Maria Ayala<br>Bernardino Luque  / Sonia Aguilera</h2>
+            <br>
+        </section>
+        <section id="ubicacion" style="padding: 10vw 0;">
+            <h2 style="font-weight: 400;">LUGAR DEL EVENTO</h2>
+            <a href="https://maps.app.goo.gl/QKZA52o4ZqvEU1SJ9"><img src="images/lugar.png" alt="" style="width: 70%; margin:10px auto 0"></a>
+        </section>
+        <img src="images/esperar.png" alt="" style="width: 60%;">
+        <h2 style="text-align: center; margin-top: 30px;">Mejor son dos que uno<br>porque obtiene más fruto de su esfuerzo</h2>
+        <h3 style="text-align: center; letter-spacing: 5px; margin-top: 10px">Eclesiastés 4:9</h3>
+    </div>
+    <div class="contenedor2">
+        <section id="tiempo" style="padding: 70px 10px 0 10px;">
+            <h2>¡Faltan para la boda!</h2>
+            <div class="contador">
+                <div><span id="dias">00</span><p>días</p></div>
+                <div><span id="horas">00</span><p>horas</p></div>
+                <div><span id="minutos">00</span><p>minutos</p></div>
+                <div><span id="segundos">00</span><p>segundos</p></div>
+            </div>
+        </section>
+
+        <section id="programa">
+            <img class="imagen-principal" src="images/evento.png" alt="">
+            <div class="columnas-texto2">
+                <img src="images/ceremonio.png" alt="">
+                <img src="images/paseo.png" alt="">
+                <img src="images/brindis.png" alt="">
+                <img src="images/cena.png" alt="">
+                <img src="images/torta.png" alt="">
+            </div>
+        </section>
+    </div>
+    <a href="https://tu-formulario.com" class="boton-flotante" target="_blank">
+        <img src="images/phone-book.png" alt="">
+        Confirmá tu asistencia
+    </a>
+
+</body>
+    <script>
+    // Configurá la fecha del evento
+    const fechaBoda = new Date("2025-07-26T00:00:00").getTime();
+
+    const cuentaRegresiva = setInterval(function() {
+        const ahora = new Date().getTime();
+        const diferencia = fechaBoda - ahora;
+
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        document.getElementById("dias").innerText = dias.toString().padStart(2, '0');
+        document.getElementById("horas").innerText = horas.toString().padStart(2, '0');
+        document.getElementById("minutos").innerText = minutos.toString().padStart(2, '0');
+        document.getElementById("segundos").innerText = segundos.toString().padStart(2, '0');
+
+        if (diferencia < 0) {
+        clearInterval(cuentaRegresiva);
+        document.getElementById("cuenta-regresiva").innerHTML = "<h2>¡Ya llegó el gran día!</h2>";
+        }
+    }, 1000);
+    </script>
+</html>
