@@ -79,7 +79,7 @@ ol, ul {
     justify-content: center;
     align-items: center;
 
-    width: 80%;
+    width: 82%;
     margin: 0 auto;
     text-align: center;
 }
@@ -91,20 +91,20 @@ ol, ul {
 h2 {
   font-family: 'Raleway', serif;
   font-weight: 200; /* o 600 para más grosor */
-  font-size: clamp(0.4rem, 2.5vw, 3.5rem);
+  font-size: clamp(0.4rem, 2.6vw, 3.5rem);
   letter-spacing: 2px; /* opcional, separa un poco las letras */
   width: 100%;
 }
 h3 {
   font-family: 'Raleway', serif;
   font-weight: 400; /* o 600 para más grosor */
-  font-size: clamp(0.4rem, 2vw, 3.5rem);
+  font-size: clamp(0.4rem, 2.1vw, 3.5rem);
   letter-spacing: 1px; /* opcional, separa un poco las letras */
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 .columnas-texto {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -173,7 +173,7 @@ section {
     margin-bottom: 20px;
     color: #ffffff;
     font-family: 'Raleway', serif;
-    font-weight: 400; /* o 600 para más grosor */
+    font-weight: 300; /* o 600 para más grosor */
     letter-spacing: 2px; /* opcional, separa un poco las letras */
     width: 100%;
 }
@@ -181,7 +181,7 @@ section {
 .contador {
     display: flex;
     justify-content: center;
-    gap: 3vw;
+    gap: 2.9vw;
     flex-wrap: wrap;
 }
 
@@ -242,7 +242,6 @@ audio {
     height: 25px;
 }
 
-
 .boton-flotante:hover {
   background-color: #218838;
 }
@@ -267,6 +266,21 @@ audio {
     .li_links{
         margin-top: 0;
     }
+}
+/* Responsivo */
+@media (max-width: 600px) {
+    .contador {
+        gap: 10px;
+    }
+
+    .contador div {
+        padding: 15px;
+        min-width: 70px;
+    }
+
+    .contador span {
+        font-size: 1.5rem;
+    }
     .columnas-texto img {
         width: 33%;
     }
@@ -281,22 +295,7 @@ audio {
     }
 
     .icono-flotante {
-        width: 15px;
-        height: 15px;
-    }
-}
-/* Responsivo */
-@media (max-width: 600px) {
-    .contador {
-        gap: 15px;
-    }
-
-    .contador div {
-        padding: 15px;
-        min-width: 70px;
-    }
-
-    .contador span {
-        font-size: 1.5rem;
+        width: 12px;
+        height: 12px;
     }
 }
