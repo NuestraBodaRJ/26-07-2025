@@ -90,16 +90,16 @@ ol, ul {
 }
 h2 {
   font-family: 'Raleway', serif;
-  font-weight: 200; /* o 600 para más grosor */
+  font-weight: 200;
   font-size: clamp(0.4rem, 2.6vw, 3.5rem);
-  letter-spacing: 2px; /* opcional, separa un poco las letras */
+  letter-spacing: 2px; 
   width: 100%;
 }
 h3 {
   font-family: 'Raleway', serif;
-  font-weight: 400; /* o 600 para más grosor */
+  font-weight: 400; 
   font-size: clamp(0.4rem, 2.1vw, 3.5rem);
-  letter-spacing: 1px; /* opcional, separa un poco las letras */
+  letter-spacing: 1px; 
   width: 100%;
   text-align: center;
 }
@@ -110,8 +110,8 @@ h3 {
     flex-wrap: nowrap;
 }
 .columnas-texto p {
-    width: 50%;           /* cada columna ocupa el 50% */
-    text-align: justify;  /* opcional */
+    width: 50%;        
+    text-align: justify; 
 }
 section {
     display: flex; 
@@ -134,16 +134,14 @@ section {
     background-repeat: repeat;
 }
 
-/* Estilos para la sección principal */
 #programa {
     background-color: white;
     margin: 70px 0 70px;
-    padding: 0 8vw; /* Espaciado lateral para móviles */
+    padding: 0 8vw; 
     text-align: center;
     width: 100%;
 }
 
-/* Imagen principal adaptativa */
 .imagen-principal {
     width: 100%;
     padding: 60px 0;
@@ -152,18 +150,16 @@ section {
     margin: 0 auto;
 }
 
-/* Contenedor de imágenes secundarias */
 .columnas-texto2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8vw; /* Espacio entre imágenes */
+    gap: 8vw; 
     margin-bottom: 60px;
 }
 
-/* Imágenes individuales */
 .columnas-texto2 img {
-    width: 25%; /* 5 en una fila aprox en escritorio */
+    width: 25%; 
     max-height: 100px;
     width: auto;
 }
@@ -173,8 +169,8 @@ section {
     margin-bottom: 20px;
     color: #ffffff;
     font-family: 'Raleway', serif;
-    font-weight: 300; /* o 600 para más grosor */
-    letter-spacing: 2px; /* opcional, separa un poco las letras */
+    font-weight: 300;
+    letter-spacing: 2px;
     width: 100%;
 }
 
@@ -223,7 +219,7 @@ audio {
     border-radius: 30px;
     text-decoration: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
+    /**z-index: 1000;**/
     font-family: 'Arial', sans-serif;
     display: flex;
     align-items: center;
@@ -236,7 +232,6 @@ audio {
     transform: scale(1.03);
 }
 
-/* Estilo para el icono dentro del botón */
 .icono-flotante {
     width: 25px;
     height: 25px;
@@ -267,10 +262,10 @@ audio {
         margin-top: 0;
     }
 }
-/* Responsivo */
+
 @media (max-width: 600px) {
     .contador {
-        gap: 9px;
+        gap: 5px;
     }
 
     .contador div {
@@ -287,7 +282,7 @@ audio {
     .boton-flotante {
         bottom: 10px;
         right: 10px;
-        font-size: 9px;
+        font-size: 11px;
         padding: 10px 12px 10px 12px;
         border-radius: 25px;
         gap: 8px;
