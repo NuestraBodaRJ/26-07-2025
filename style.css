@@ -41,6 +41,7 @@ ol, ul {
 }
 .menu_hamburguesa:checked + .ul_links{
     height: calc(100vh - 60px);
+    z-index:10000;
 }
 .logo {
     color: var(--color_primario);
